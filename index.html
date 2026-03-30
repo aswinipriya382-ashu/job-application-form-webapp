@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-center">
+    <div class="form-box">
+
+        <h2 class="text-center mb-4">Job Application</h2>
+
+        <form id="jobForm">
+
+            <div class="mb-3">
+                <input class="form-control" type="text" id="name" placeholder="Full Name">
+                <small id="nameError" class="error"></small>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" type="email" id="email" placeholder="Email">
+                <small id="emailError" class="error"></small>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" type="text" id="phone" placeholder="Phone Number">
+                <small id="phoneError" class="error"></small>
+            </div>
+
+            <div class="mb-3">
+                <label>Gender</label><br>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female" class="ms-3"> Female
+            </div>
+
+            <div class="mb-3">
+                <label>Skills</label><br>
+                <input type="checkbox" value="HTML"> HTML
+                <input type="checkbox" value="CSS" class="ms-2"> CSS
+                <input type="checkbox" value="JavaScript" class="ms-2"> JavaScript
+            </div>
+
+            <div class="mb-3">
+                <select class="form-control" id="experience">
+                    <option value="">Select Experience</option>
+                    <option>Fresher</option>
+                    <option>1-2 Years</option>
+                    <option>3+ Years</option>
+                </select>
+                <small id="expError" class="error"></small>
+            </div>
+
+            <div class="mb-3">
+                <label>Resume</label>
+                <input class="form-control" type="file" id="resume">
+                <small id="resumeError" class="error"></small>
+            </div>
+
+            <div class="mb-3">
+                <textarea class="form-control" id="messageBox" placeholder="Cover Letter"></textarea>
+            </div>
+
+            <button type="submit" class="btn submit-btn w-100">Submit Application</button>
+            <button type="reset" class="btn reset-btn w-100 mt-2">Reset Form</button>
+
+        </form>
+
+        <!-- Success Message -->
+        <p id="message" class="text-center mt-3"></p>
+
+        <!-- Output (Hidden initially) -->
+        <div id="output" class="mt-4 d-none"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
